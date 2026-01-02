@@ -1,0 +1,9 @@
+[
+  {
+    "name": "rihem",
+    "email": "rihem@example.com",
+    "subject": "Bonjour",
+    "message": "Bonjour Rihem, ceci est un message de test.",
+    "date": "2026-01-02 23:00:00"
+  }
+]
