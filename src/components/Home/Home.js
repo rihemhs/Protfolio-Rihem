@@ -6,7 +6,6 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import cvEnglais from "../../Assets/CV-RIHEMHASSOUNA.pdf";
 import cvFrancais from "../../Assets/CV-RIHEM HASSOUNA.pdf";
-import { GoCloudDownload } from "react-icons/go";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 import { useState } from 'react';
@@ -86,7 +85,7 @@ function Home() {
 
               <div className="cta-buttons">
                 <Button className="btn-download" onClick={handleDownload}>
-                  <GoCloudDownload />
+                 
                   {t('CV')}
                 </Button>
 
