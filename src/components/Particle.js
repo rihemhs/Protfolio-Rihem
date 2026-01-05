@@ -1,4 +1,4 @@
-import React from "react";
+
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
@@ -8,6 +8,7 @@ function Particle() {
   };
 
   return (
+    <>
     <Particles
       id="tsparticles"
       init={particlesInit}
@@ -44,7 +45,7 @@ function Particle() {
         },
         particles: {
           color: {
-            value: ["#7F5CFF", "#A855F7", "#3B82F6"],
+            value: ["red", "red", "red"],
           },
           links: {
             color: "#7F5CFF",
@@ -100,6 +101,7 @@ function Particle() {
         detectRetina: true,
       }}
     />
+    </>
   );
 }
 

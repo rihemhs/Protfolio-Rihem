@@ -23,30 +23,30 @@ function Home() {
     document.body.classList.add("fade-in");
   }, []);
 
-const confirmDownload = () => {
-  const isFrench = i18n.language === "fr";
+  const confirmDownload = () => {
+    const isFrench = i18n.language === "fr";
 
-  const fileUrl = isFrench ? cvFrancais : cvEnglais;
-  const fileName = isFrench
-    ? "CV-RIHEM HASSOUNA.pdf"
-    : "CV-RIHEM-HASSOUNA.pdf";
+    const fileUrl = isFrench ? cvFrancais : cvEnglais;
+    const fileName = isFrench
+      ? "CV-RIHEM HASSOUNA.pdf"
+      : "CV-RIHEM-HASSOUNA.pdf";
 
-  fetch(fileUrl)
-    .then((response) => response.blob())
-    .then((blob) => {
-      const fileURL = window.URL.createObjectURL(blob);
-      const alink = document.createElement("a");
-      alink.href = fileURL;
-      alink.download = fileName;
-      alink.click();
-      window.URL.revokeObjectURL(fileURL);
-    })
-    .catch((error) => {
-      console.error("Erreur de téléchargement :", error);
-    });
+    fetch(fileUrl)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const fileURL = window.URL.createObjectURL(blob);
+        const alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = fileName;
+        alink.click();
+        window.URL.revokeObjectURL(fileURL);
+      })
+      .catch((error) => {
+        console.error("Erreur de téléchargement :", error);
+      });
 
-  setShowAlert(false);
-};
+    setShowAlert(false);
+  };
 
 
   const cancelDownload = () => {
@@ -90,7 +90,13 @@ const confirmDownload = () => {
                   {t('CV')}
                 </Button>
 
-                <Button className="btn-contact" href="#contact">
+                <Button
+                  as="a"
+                  href="mailto:rihemhassounanjim90@gmail.com
+    ?subject=Contact%20from%20Portfolio
+    &body=Hello%20Rihem,%0D%0A%0D%0AI%20would%20like%20to%20contact%20you."
+                  variant="outline-light"
+                  className="btn-contact" >
 
                   {t('contacter')}
                 </Button>
@@ -130,37 +136,37 @@ const confirmDownload = () => {
 
             {t('Découvrir')}</span>
         </div>
-        <Modal 
-        show={showAlert} 
-        onHide={cancelDownload}
-        centered
-        className="download-modal"
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>
-            {i18n.language === 'fr' ? 'Télécharger le CV' : 'Download CV'}
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {i18n.language === 'fr' 
-            ? 'Voulez-vous télécharger le CV de Rihem Hassouna ?' 
-            : 'Do you want to download Rihem Hassouna\'s CV?'}
-          <br />
-          <small className="text-muted">
-            {i18n.language === 'fr' 
-              ? 'Nom du fichier: CV-RIHEM_HASSOUNA.pdf' 
-              : 'File name: CV-RIHEMHASSOUNA.pdf'}
-          </small>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={cancelDownload}>
-            {i18n.language === 'fr' ? 'Annuler' : 'Cancel'}
-          </Button>
-          <Button variant="primary" onClick={confirmDownload}>
-            {i18n.language === 'fr' ? 'Télécharger' : 'Download'}
-          </Button>
-        </Modal.Footer>
-      </Modal>
+        <Modal
+          show={showAlert}
+          onHide={cancelDownload}
+          centered
+          className="download-modal"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>
+              {i18n.language === 'fr' ? 'Télécharger le CV' : 'Download CV'}
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {i18n.language === 'fr'
+              ? 'Voulez-vous télécharger le CV de Rihem Hassouna ?'
+              : 'Do you want to download Rihem Hassouna\'s CV?'}
+            <br />
+            <small className="text-muted">
+              {i18n.language === 'fr'
+                ? 'Nom du fichier: CV-RIHEM_HASSOUNA.pdf'
+                : 'File name: CV-RIHEMHASSOUNA.pdf'}
+            </small>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={cancelDownload}>
+              {i18n.language === 'fr' ? 'Annuler' : 'Cancel'}
+            </Button>
+            <Button variant="primary" onClick={confirmDownload}>
+              {i18n.language === 'fr' ? 'Télécharger' : 'Download'}
+            </Button>
+          </Modal.Footer>
+        </Modal>
 
       </Container>
 

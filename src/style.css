@@ -2449,3 +2449,15 @@ button:focus {
   background: #0d6efd;
   color: #fff;
 }
+/* //Partise */
+.cta-buttons {
+  position: relative;
+  z-index: 10;
+}
+
+.cta-buttons .btn {
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+

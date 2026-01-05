@@ -23,37 +23,37 @@ function Projects() {
       imgPath: ERPGETS,
       title: t("ERP"),
       demoLink: "https://arkus.gets-company.com/signin",
-      description:t("descriptionERP") ,
-      tech: ["Next.js", "Spring Boot", "PostgreSQL", "ERP", "HR", "Finance", "Payroll","Logistic"]
+      description: t("descriptionERP"),
+      tech: ["Next.js", "Spring Boot", "PostgreSQL", "ERP", "HR", "Finance", "Payroll", "Logistic"]
     },
 
     {
       imgPath: sddmprojet,
       title: t("SDDM"),
-      description:t("descriptionSDDM"),
+      description: t("descriptionSDDM"),
       tech: ["React", "Stripe", "GraphQL", "E-commerce"]
     },
     {
       imgPath: soforthandelsregister,
-      title:t("SofortHandelsregister"),
+      title: t("SofortHandelsregister"),
       description: t("descriptionSofortHandelsregister"),
       demoLink: "https://sofort-handelsregister.com",
       tech: ["React", "API", "E-commerce"]
     },
-  
+
     {
       imgPath: leaf,
-      title:t("GLOCAL"),
+      title: t("GLOCAL"),
       description: t("descriptionGlocal"),
       demoLink: "https://glocal-it-solutions.com/",
       tech: ["React", "Responsive", "Corporate"]
     },
     {
-      imgPath: TicketProm ,
+      imgPath: TicketProm,
       title: t("TicketPromo"),
       description: t("descriptionTicketPromo"),
-        demoLink: "ticket-promo.com",
-      tech: ["React","php", "LocalStorage", "Components"]
+      demoLink: "ticket-promo.com",
+      tech: ["React", "php", "LocalStorage", "Components"]
     },
     {
       imgPath: suicide,
@@ -62,25 +62,25 @@ function Projects() {
       tech: ["React", "E-commerce", "Sport",]
     },
     {
-      imgPath: glovax ,
+      imgPath: glovax,
       title: t("CompanySite"),
       description: t("CompanySiteDescription"),
-      demoLink: "https://globivax.com/",    
-      tech: ["wordpress", "php", "phpMyAdmin","Freelance","HTML","CSS"]
+      demoLink: "https://globivax.com/",
+      tech: ["wordpress", "php", "phpMyAdmin", "Freelance", "HTML", "CSS"]
     },
     {
-      imgPath: hanshafish ,
+      imgPath: hanshafish,
       title: t("MobileApp"),
       description: t("MobileAppDescription"),
-      demoLink: "https://play.google.com/store/apps/details?id=com.hanchiafish.app&hl=fr",    
-      tech: ["React Native","Freelance"]
+      demoLink: "https://play.google.com/store/apps/details?id=com.hanchiafish.app&hl=fr",
+      tech: ["React Native", "Freelance"]
     },
-      {
+    {
       imgPath: New,
       title: t("MobileAppNewOfNewCommerce"),
       description: t("MobileAppNewOfNewCommerceDescription"),
-      demoLink: "",    
-      tech: ["React Native","Freelance"]
+      demoLink: "",
+      tech: ["React Native", "Freelance"]
     },
   ];
 
@@ -90,10 +90,10 @@ function Projects() {
       <Container className="project-container">
         <div className="project-header">
           <h1 className="project-heading">
-             <span className="purple-gradient">{t("projets")} </span>
+            <span className="purple-gradient">{t("projets")} </span>
           </h1>
           <p className="project-subtitle">
-           {t("projectsSubtitle")} 
+            {t("projectsSubtitle")}
           </p>
         </div>
 
@@ -121,10 +121,17 @@ function Projects() {
         <div className="cta-section">
           <p className="cta-text">
             {t("InterestedText")}
-      
+
           </p>
-          <a href="#contact" className="cta-button">
-           {t("contacter")}
+          <a
+            as="a"
+            href="mailto:rihemhassounanjim90@gmail.com
+    ?subject=Contact%20from%20Portfolio
+    &body=Hello%20Rihem,%0D%0A%0D%0AI%20would%20like%20to%20contact%20you."
+            variant="outline-light"
+
+            className="cta-button">
+            {t("contacter")}
           </a>
         </div>
       </Container>

@@ -1,13 +1,26 @@
-
 import { Container, Row, Col, Button, Badge } from "react-bootstrap";
 import myImg from "../../Assets/rihem.jpg";
-import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import { AiFillGithub, AiOutlineMail, AiFillFolderOpen } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home2() {
   const { t } = useTranslation();
+  const navigate = useNavigate(); // Hook pour la navigation
+
+  // Fonction pour gérer le clic sur "View Projects"
+  const handleViewProjects = () => {
+    console.log("Testttt");
+    navigate("/project");
+  };
+
+  // Fonction pour ouvrir l'email
+  const handleEmailClick = () => {
+    window.location.href = "mailto:rihemhassounanjim90@gmail.com?subject=Contact%20from%20Portfolio";
+  };
 
   return (
     <section className="home-about-pro" id="about">
@@ -71,12 +84,31 @@ function Home2() {
             </Row>
 
             <div className="cta-buttons mt-4">
-              <Button variant="primary" href="#projects" className="me-3">
+
+              {/* Bouton pour aller à la page /project - CORRIGÉ */}
+              <Button
+                as={Link}
+                to="/project"
+                variant="primary"
+                className="me-3"
+              >
+                <AiFillFolderOpen className="me-2" />
                 {t("viewProjects")}
               </Button>
-              <Button variant="outline-light" href="#contact">
+
+
+              {/* Bouton pour ouvrir email - CORRIGÉ */}
+              <Button
+                as="a"
+                href="mailto:rihemhassounanjim90@gmail.com
+    ?subject=Contact%20from%20Portfolio
+    &body=Hello%20Rihem,%0D%0A%0D%0AI%20would%20like%20to%20contact%20you."
+                variant="outline-light"
+              >
+                <AiOutlineMail className="me-2" />
                 {t("contactMe")}
               </Button>
+
             </div>
 
             <div className="social-links-pro mt-4">
@@ -91,7 +123,6 @@ function Home2() {
                 <FaLinkedinIn />
               </a>
             </div>
-
 
           </Col>
 

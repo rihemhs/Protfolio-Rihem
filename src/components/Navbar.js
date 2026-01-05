@@ -120,7 +120,7 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
+              {/* <Nav.Link
                 as={Link}
                 to="/contact"
                 className={`nav-link ${activeLink === "contact" ? "active" : ""}`}
@@ -129,7 +129,7 @@ function NavBar() {
                 <AiOutlinePhone className="nav-icon" />
                 <span className="nav-text">{t('contact')}</span>
                 <div className="nav-indicator"></div>
-              </Nav.Link>
+              </Nav.Link> */}
             </Nav.Item>
 
             {/* Sélecteur de langue avec i18next */}
