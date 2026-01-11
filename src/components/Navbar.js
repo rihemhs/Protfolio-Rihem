@@ -15,6 +15,8 @@ import {
   AiOutlineGlobal
 } from "react-icons/ai";
 import { FiChevronDown } from "react-icons/fi";
+import { BsSun, BsMoon } from "react-icons/bs";
+import { useTheme } from "../contexts/ThemeContext";
 
 // Import i18next
 import { useTranslation } from "react-i18next";
@@ -26,6 +28,9 @@ function NavBar() {
   
   // Utiliser i18next
   const { t, i18n } = useTranslation();
+  
+  // Utiliser le contexte du thème
+  const { theme, toggleTheme } = useTheme();
 
   function scrollHandler() {
     if (window.scrollY >= 80) {
@@ -160,6 +165,21 @@ function NavBar() {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
+            </Nav.Item>
+
+            {/* Bouton de bascule du thème */}
+            <Nav.Item className="nav-theme-item">
+              <button
+                onClick={toggleTheme}
+                className="theme-toggle-btn"
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? (
+                  <BsSun className="theme-icon" />
+                ) : (
+                  <BsMoon className="theme-icon" />
+                )}
+              </button>
             </Nav.Item>
 
             {/* CTA Button */}
