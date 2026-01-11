@@ -60,7 +60,7 @@ const resources = {
       contacter: "Contact Me",
       Découvrir: "Discover more",
       FullStack: "Full Stack Web Developer",
-      discription: "Full-Stack Developer with 5+ years of experience designing scalable, high-performance applications using Spring Boot, React.js/Next.js, and TypeScript. Strong expertise in REST APIs, database optimization, secure architectures (JWT, Spring Security), and Agile software delivery. Proven ability to build ERP systems collaborate with cross-functional teams, and deliver clean, maintainable code.",
+      discription: "Full-Stack Developer with 7+ years of experience designing scalable, high-performance applications using Spring Boot, React.js/Next.js, and TypeScript. Strong expertise in REST APIs, database optimization, secure architectures (JWT, Spring Security), and Agile software delivery. Proven ability to build ERP systems collaborate with cross-functional teams, and deliver clean, maintainable code.",
       viewProjects: "View Projects",
       contactMe: "Contact Me",
 
@@ -227,7 +227,7 @@ const resources = {
       contacter: "Me contacter",
       Découvrir: "Découvrir plus",
       FullStack: "Développeur Web Full Stack",
-      discription: "Développeur Full-Stack avec plus de 5 ans d’expérience dans la conception et le développement d’applications scalables et haute performance utilisant Spring Boot, React.js/Next.js et TypeScript.Solide expertise dans la création d’API REST, l’optimisation des bases de données et la mise en place d’architectures sécurisées (JWT, Spring Security). Habitué aux méthodologies Agile, avec une capacité éprouvée à développer des systèmes ERP, à collaborer efficacement avec des équipes pluridisciplinaires et à livrer un code propre, maintenable et de qualité.",
+      discription: "Développeur Full-Stack avec plus de 7 ans d’expérience dans la conception et le développement d’applications scalables et haute performance utilisant Spring Boot, React.js/Next.js et TypeScript.Solide expertise dans la création d’API REST, l’optimisation des bases de données et la mise en place d’architectures sécurisées (JWT, Spring Security). Habitué aux méthodologies Agile, avec une capacité éprouvée à développer des systèmes ERP, à collaborer efficacement avec des équipes pluridisciplinaires et à livrer un code propre, maintenable et de qualité.",
       designedBy: "Conçu et développé par Rihem Hassouna",
       copyright: "Copyright © {{year}} RH",
       // Dans resources.en.translation
