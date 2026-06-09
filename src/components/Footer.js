@@ -1,8 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { AiFillGithub } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import SocialLinks from "./shared/SocialLinks";
 
 function Footer() {
   const { t } = useTranslation();
@@ -21,29 +20,7 @@ function Footer() {
 
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
-            <li className="social-icons">
-              <a
-                href="https://github.com/rihemhs"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <AiFillGithub />
-              </a>
-            </li>
-
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/rihem-hassouna-a17254179/"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
+            <SocialLinks className="social-icons" style={{ color: "white" }} />
           </ul>
         </Col>
       </Row>

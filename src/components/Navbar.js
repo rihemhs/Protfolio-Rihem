@@ -20,6 +20,7 @@ import { useTheme } from "../contexts/ThemeContext";
 
 // Import i18next
 import { useTranslation } from "react-i18next";
+import { CONTACT } from "../constants/contactInfo";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -185,7 +186,7 @@ function NavBar() {
             {/* CTA Button */}
             <Nav.Item className="nav-cta-item">
               <a
-                href="mailto:rihemhassounanjim90@gmail.com"
+                href={`mailto:${CONTACT.email}`}
                 className="nav-cta-button"
                 target="_blank"
                 rel="noopener noreferrer"

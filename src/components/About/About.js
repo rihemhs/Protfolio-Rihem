@@ -5,6 +5,8 @@ import AboutCard from "./AboutCard";
 import Toolstack from "./Toolstack";
 import aboutImg from "../../Assets/about.png";
 import { useTranslation } from "react-i18next";
+import SkillCard from "../shared/SkillCard";
+
 function About() {
     const { t } = useTranslation();
   return (
@@ -20,36 +22,11 @@ function About() {
             <AboutCard />
 
             <Row className="skills-cards mt-4">
-              <Col sm={6}>
-                <div className="skill-card">
-                  💻 <strong>Frontend</strong>
-                  <span style={{color:"black"}}>React.js, Next.js, TypeScript, JavaScript, Tailwind, HTML5, CSS3, Ant Design</span>
-                </div>
-              </Col>
-              <Col sm={6}>
-                <div className="skill-card">
-                  ⚙️ <strong>Backend</strong>
-                  <span>Java, Spring Boot, Node.js, REST APIs, JWT, Spring Security, PHP</span>
-                </div>
-              </Col>
-              <Col sm={6}>
-                <div className="skill-card">
-                  🗄️ <strong> {t("DB")} </strong>
-                  <span>PostgreSQL, MySQL, Oracle, SQL Server</span>
-                </div>
-              </Col>
-              <Col sm={6}>
-                <div className="skill-card">
-                  🛠️ <strong> {t("DevOps")}</strong>
-                  <span>Git, Docker, Postman, Swagger, Jira, Agile/Scrum</span>
-                </div>
-              </Col>
-              <Col sm={6}>
-                <div className="skill-card">
-                  📱 <strong>{t("Mobile")}</strong>
-                  <span>React Native, Android</span>
-                </div>
-              </Col>
+              <SkillCard emoji="💻" title="Frontend" description="React.js, Next.js, TypeScript, JavaScript, Tailwind, HTML5, CSS3, Ant Design" descriptionStyle={{color:"black"}} />
+              <SkillCard emoji="⚙️" title="Backend" description="Java, Spring Boot, Node.js, REST APIs, JWT, Spring Security, PHP" />
+              <SkillCard emoji="🗄️" title={t("DB")} description="PostgreSQL, MySQL, Oracle, SQL Server" />
+              <SkillCard emoji="🛠️" title={t("DevOps")} description="Git, Docker, Postman, Swagger, Jira, Agile/Scrum" />
+              <SkillCard emoji="📱" title={t("Mobile")} description="React Native, Android" />
             </Row>
 
           </Col>
