@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact"
-import Messages from "./components/Contact/Messages"
+import Contact from "./components/Contact/Contact";
+import Messages from "./components/Contact/Messages";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import { ThemeProvider } from "./contexts/ThemeContext";

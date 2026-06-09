@@ -63,6 +63,7 @@ function ProjectCards(props) {
               variant="outline-primary"
               href={props.ghLink}
               target="_blank"
+              rel="noopener noreferrer"
               className="action-button"
             >
               <BsGithub /> <span>Code</span>
@@ -74,6 +75,7 @@ function ProjectCards(props) {
               variant="primary"
               href={props.demoLink}
               target="_blank"
+              rel="noopener noreferrer"
               className="action-button demo-button"
             >
               <CgWebsite /> <span>{t("voirproject")}</span>
@@ -85,6 +87,7 @@ function ProjectCards(props) {
               variant="primary"
               href={props.ghLink}
               target="_blank"
+              rel="noopener noreferrer"
               className="action-button"
             >
               <MdOutlineCode /> <span>{t("explorer")}</span>

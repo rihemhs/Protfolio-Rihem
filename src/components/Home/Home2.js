@@ -11,9 +11,7 @@ function Home2() {
   const { t } = useTranslation();
   const navigate = useNavigate(); // Hook pour la navigation
 
-  // Fonction pour gérer le clic sur "View Projects"
   const handleViewProjects = () => {
-    console.log("Testttt");
     navigate("/project");
   };
 
