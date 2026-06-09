@@ -30,8 +30,15 @@ function Home() {
       ? "CV-RIHEM HASSOUNA.pdf"
       : "CV-RIHEM-HASSOUNA.pdf";
 
+    setShowAlert(false);
+
     fetch(fileUrl)
-      .then((response) => response.blob())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Download failed (status ${response.status})`);
+        }
+        return response.blob();
+      })
       .then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
         const alink = document.createElement("a");
@@ -41,10 +48,13 @@ function Home() {
         window.URL.revokeObjectURL(fileURL);
       })
       .catch((error) => {
-        console.error("Erreur de téléchargement :", error);
+        console.error("CV download error:", error);
+        alert(
+          isFrench
+            ? "Erreur lors du téléchargement du CV. Veuillez réessayer."
+            : "Failed to download CV. Please try again."
+        );
       });
-
-    setShowAlert(false);
   };
 
 

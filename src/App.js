@@ -9,6 +9,7 @@ import Messages from "./components/Contact/Messages"
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 import {
   BrowserRouter as Router,
@@ -33,6 +34,7 @@ function App() {
   }, []);
 
   return (
+    <ErrorBoundary>
     <ThemeProvider>
       <Router>
         <Preloader load={load} />
@@ -52,6 +54,7 @@ function App() {
         </div>
       </Router>
     </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 

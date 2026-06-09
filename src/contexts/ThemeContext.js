@@ -16,8 +16,11 @@ export const useTheme = () => {
 export const ThemeProvider = ({ children }) => {
   // Récupérer le thème sauvegardé dans localStorage ou utiliser 'dark' par défaut
   const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem('theme');
-    return savedTheme || 'dark';
+    try {
+      return localStorage.getItem('theme') || 'dark';
+    } catch {
+      return 'dark';
+    }
   });
 
   // Basculer entre les thèmes
@@ -28,7 +31,11 @@ export const ThemeProvider = ({ children }) => {
   // Appliquer le thème au body et le sauvegarder dans localStorage
   useEffect(() => {
     document.body.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+    try {
+      localStorage.setItem('theme', theme);
+    } catch (err) {
+      console.error('Failed to persist theme preference:', err);
+    }
   }, [theme]);
 
   const value = {

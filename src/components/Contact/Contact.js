@@ -8,15 +8,25 @@ function Contact() {
 
   // Charger messages initiaux depuis JSON ou localStorage
   useEffect(() => {
-    const stored = localStorage.getItem("contactMessages");
-    if (stored) {
-      setMessages(JSON.parse(stored)); // Messages sauvegardés côté client
-    } else {
-      fetch("/data/messages.json")
-        .then(res => res.json())
-        .then(data => setMessages(data))
-        .catch(err => console.error("Erreur lecture JSON:", err));
+    try {
+      const stored = localStorage.getItem("contactMessages");
+      if (stored) {
+        setMessages(JSON.parse(stored));
+        return;
+      }
+    } catch (err) {
+      console.error("Failed to read messages from localStorage:", err);
     }
+
+    fetch("/data/messages.json")
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`Failed to load messages (status ${res.status})`);
+        }
+        return res.json();
+      })
+      .then(data => setMessages(data))
+      .catch(err => console.error("Failed to load initial messages:", err));
   }, []);
 
   const handleSubmit = (e) => {
@@ -31,7 +41,12 @@ function Contact() {
 
     const updatedMessages = [...messages, newMessage];
     setMessages(updatedMessages);
-    localStorage.setItem("contactMessages", JSON.stringify(updatedMessages));
+
+    try {
+      localStorage.setItem("contactMessages", JSON.stringify(updatedMessages));
+    } catch (err) {
+      console.error("Failed to save messages to localStorage:", err);
+    }
 
     e.target.reset();
     alert("Message envoyé et enregistré localement !");
