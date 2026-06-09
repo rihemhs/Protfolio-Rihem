@@ -4,7 +4,11 @@ import { loadSlim } from "tsparticles-slim";
 
 function Particle() {
   const particlesInit = async (main) => {
-    await loadSlim(main);
+    try {
+      await loadSlim(main);
+    } catch (err) {
+      console.error("Failed to initialize particles:", err);
+    }
   };
 
   return (
