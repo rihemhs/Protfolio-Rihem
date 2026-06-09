@@ -1,14 +1,13 @@
 import React from 'react';
 import { BsWhatsapp } from 'react-icons/bs';
 import './WhatsAppButton.css';
+import { CONTACT } from '../constants/contactInfo';
 
 function WhatsAppButton() {
-  const phoneNumber = '+21652113008'; // Votre numéro WhatsApp
-  const message = 'Bonjour! Je vous contacte depuis votre portfolio.'; // Message par défaut
+  const message = 'Bonjour! Je vous contacte depuis votre portfolio.';
   
   const handleClick = () => {
-    // Créer le lien WhatsApp
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 

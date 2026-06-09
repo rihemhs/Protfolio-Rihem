@@ -1,26 +1,16 @@
 import { Container, Row, Col, Button, Badge } from "react-bootstrap";
 import myImg from "../../Assets/rihem.jpg";
-import { AiFillGithub, AiOutlineMail, AiFillFolderOpen } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { AiOutlineMail, AiFillFolderOpen } from "react-icons/ai";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { CONTACT } from "../../constants/contactInfo";
+import SocialLinks from "../shared/SocialLinks";
+import SkillCard from "../shared/SkillCard";
+import MailtoButton from "../shared/MailtoButton";
 
 function Home2() {
   const { t } = useTranslation();
-  const navigate = useNavigate(); // Hook pour la navigation
-
-  // Fonction pour gérer le clic sur "View Projects"
-  const handleViewProjects = () => {
-    console.log("Testttt");
-    navigate("/project");
-  };
-
-  // Fonction pour ouvrir l'email
-  const handleEmailClick = () => {
-    window.location.href = "mailto:rihemhassounanjim90@gmail.com?subject=Contact%20from%20Portfolio";
-  };
 
   return (
     <section className="home-about-pro" id="about">
@@ -49,38 +39,18 @@ function Home2() {
                 <HiOutlineLocationMarker /> <strong>{t("Address")}:</strong> Sfax, Tunisie
               </div>
               <div className="info-item">
-                <AiOutlineMail /> <strong>Email:</strong> rihemhassounanjim90@gmail.com
+                <AiOutlineMail /> <strong>Email:</strong> {CONTACT.email}
               </div>
               <div className="info-item">
-                📞 <strong>{t("Phone")}:</strong> +216 52 113 008
+                📞 <strong>{t("Phone")}:</strong> {CONTACT.phone}
               </div>
             </div>
 
             <Row className="skills-cards mt-4">
-              <Col sm={6}>
-                <div className="skill-card">
-                  💻 <strong>{t("Frontend")}</strong>
-                  <span>React, Next.js, HTML, CSS, JavaScript</span>
-                </div>
-              </Col>
-              <Col sm={6}>
-                <div className="skill-card">
-                  ⚙️ <strong>{t("Backend")}</strong>
-                  <span>Node.js, Spring Boot, PHP, Java</span>
-                </div>
-              </Col>
-              <Col sm={6}>
-                <div className="skill-card">
-                  🧩 <strong>{t("CMS")}</strong>
-                  <span>WordPress, Plugins, Themes</span>
-                </div>
-              </Col>
-              <Col sm={6}>
-                <div className="skill-card">
-                  🚀 <strong>{t("Performance")}</strong>
-                  <span>{t("PerformanceDesc")}</span>
-                </div>
-              </Col>
+              <SkillCard emoji="💻" title={t("Frontend")} description="React, Next.js, HTML, CSS, JavaScript" />
+              <SkillCard emoji="⚙️" title={t("Backend")} description="Node.js, Spring Boot, PHP, Java" />
+              <SkillCard emoji="🧩" title={t("CMS")} description="WordPress, Plugins, Themes" />
+              <SkillCard emoji="🚀" title={t("Performance")} description={t("PerformanceDesc")} />
             </Row>
 
             <div className="cta-buttons mt-4">
@@ -97,31 +67,16 @@ function Home2() {
               </Button>
 
 
-              {/* Bouton pour ouvrir email - CORRIGÉ */}
-              <Button
-                as="a"
-                href="mailto:rihemhassounanjim90@gmail.com
-    ?subject=Contact%20from%20Portfolio
-    &body=Hello%20Rihem,%0D%0A%0D%0AI%20would%20like%20to%20contact%20you."
-                variant="outline-light"
-              >
+              {/* Bouton pour ouvrir email */}
+              <MailtoButton>
                 <AiOutlineMail className="me-2" />
                 {t("contactMe")}
-              </Button>
+              </MailtoButton>
 
             </div>
 
             <div className="social-links-pro mt-4">
-              <a href="https://github.com/rihemhs" target="_blank" rel="noreferrer">
-                <AiFillGithub />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/rihem-hassouna-a17254179/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
+              <SocialLinks />
             </div>
 
           </Col>

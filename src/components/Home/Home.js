@@ -9,6 +9,7 @@ import cvFrancais from "../../Assets/CV-RIHEM HASSOUNA.pdf";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 import { useState } from 'react';
+import MailtoButton from "../shared/MailtoButton";
 
 function Home() {
   const { t, i18n } = useTranslation();
@@ -89,16 +90,9 @@ function Home() {
                   {t('CV')}
                 </Button>
 
-                <Button
-                  as="a"
-                  href="mailto:rihemhassounanjim90@gmail.com
-    ?subject=Contact%20from%20Portfolio
-    &body=Hello%20Rihem,%0D%0A%0D%0AI%20would%20like%20to%20contact%20you."
-                  variant="outline-light"
-                  className="btn-contact" >
-
+                <MailtoButton className="btn-contact">
                   {t('contacter')}
-                </Button>
+                </MailtoButton>
               </div>
             </div>
           </Col>

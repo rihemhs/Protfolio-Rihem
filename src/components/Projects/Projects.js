@@ -14,6 +14,7 @@ import glovax from "../../Assets/Projects/glovax.PNG";
 import hanshafish from "../../Assets/Projects/hanshafish.jpeg";
 import New from "../../Assets/Projects/NewoFNewCommerce.jpeg";
 import { useTranslation } from "react-i18next";
+import { MAILTO_URL } from "../../constants/contactInfo";
 
 
 function Projects() {
@@ -124,12 +125,7 @@ function Projects() {
 
           </p>
           <a
-            as="a"
-            href="mailto:rihemhassounanjim90@gmail.com
-    ?subject=Contact%20from%20Portfolio
-    &body=Hello%20Rihem,%0D%0A%0D%0AI%20would%20like%20to%20contact%20you."
-            variant="outline-light"
-
+            href={MAILTO_URL}
             className="cta-button">
             {t("contacter")}
           </a>
