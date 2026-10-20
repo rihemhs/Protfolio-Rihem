@@ -17,7 +17,7 @@ export const ThemeProvider = ({ children }) => {
   // Récupérer le thème sauvegardé dans localStorage ou utiliser 'dark' par défaut
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
-    return savedTheme || 'dark';
+    return savedTheme || 'light';
   });
 
   // Basculer entre les thèmes

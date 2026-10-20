@@ -45,10 +45,10 @@ function Particle() {
         },
         particles: {
           color: {
-            value: ["red", "red", "red"],
+            value: ["#64748b", "#94a3b8", "#cbd5e1"],
           },
           links: {
-            color: "#7F5CFF",
+            color: "#94a3b8",
             distance: 150,
             enable: true,
             opacity: 0.2,

@@ -23,7 +23,7 @@ function About() {
               <Col sm={6}>
                 <div className="skill-card">
                   💻 <strong>Frontend</strong>
-                  <span style={{color:"black"}}>React.js, Next.js, TypeScript, JavaScript, Tailwind, HTML5, CSS3, Ant Design</span>
+                  <span>React.js, Next.js, TypeScript, JavaScript, Tailwind, HTML5, CSS3, Ant Design</span>
                 </div>
               </Col>
               <Col sm={6}>

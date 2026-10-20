@@ -6,17 +6,17 @@ function AboutCard() {
   return (
     <Card className="about-card-pro">
       <Card.Body>
-        <p style={{color:"black"}}>
+        <p>
          {t("salutation")}<span>Rihem Hassouna</span>,  {t("a")} <strong>{t(" position")}</strong>
          {t("decriptionposition")}
         </p>
 
         <ul className="about-list">
-          <li style={{color:"#1A1818"}}> {t("list1")}</li>
-          <li style={{color:"#1A1818"}}> {t("list2")}</li>
-          <li style={{color:"#1A1818"}}> {t("list3")}</li>
-          <li style={{color:"#1A1818"}}>  {t("list4")}</li>
-          <li style={{color:"#1A1818"}}>{t("list5")}</li>
+          <li>{t("list1")}</li>
+          <li>{t("list2")}</li>
+          <li>{t("list3")}</li>
+          <li>{t("list4")}</li>
+          <li>{t("list5")}</li>
         </ul>
 
         <p className="quote">“{t("result")}”</p>
