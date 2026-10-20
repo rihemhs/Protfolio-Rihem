@@ -30,7 +30,6 @@ const resources = {
 
       // Sections Projects
       projectsTitle: "My Projects",
-      projectsSubtitle: "Some of my recent work",
       viewDetails: "View Details",
       technologies: "Technologies",
 
@@ -177,34 +176,14 @@ const resources = {
       mobilityDriving: "Driving licence",
       referencesNote: "Professional references available on request.",
       discription: "Full-Stack Developer with 7+ years of experience designing scalable, high-performance applications using Spring Boot, React.js/Next.js, and TypeScript. Strong expertise in REST APIs, database optimization, secure architectures (JWT, Spring Security), and Agile software delivery. Proven ability to build ERP systems collaborate with cross-functional teams, and deliver clean, maintainable code.",
-      viewProjects: "View Projects",
-      contactMe: "Contact Me",
-
-      // Infos
       Residence: "Residence",
       Address: "Address",
       Phone: "Phone",
-
-      // Skills
       Frontend: "Frontend",
       Backend: "Backend",
       CMS: "CMS",
       Performance: "Performance & UX",
-      PerformanceDesc: "Optimization, Responsive Design",
-      viewProjects: "Voir mes projets",
-      contactMe: "Me contacter",
-
-      // Infos
-      Residence: "Résidence",
-      Address: "Adresse",
-      Phone: "Téléphone",
-
-      // Skills
-      Frontend: "Frontend",
-      Backend: "Backend",
-      CMS: "CMS",
-      Performance: "Performance & UX",
-      PerformanceDesc: "Optimisation, Design responsive",
+      PerformanceDesc: "Optimization, responsive design",
       designedBy: "Designed and Developed by Rihem Hassouna",
       copyright: "Copyright © {{year}} RH",
       // Dans resources.fr.translation
@@ -252,38 +231,6 @@ const resources = {
       //final 
       InterestedText: "Interested in a collaboration ?",
       voirproject:"View Project",
-  "contact": {
-    "title": "Contact Us",
-    "description": "Get in touch with us. We'd love to hear from you.",
-    "getInTouch": "Get in Touch",
-    "sendMessage": "Send us a Message",
-    "address": {
-      "title": "Address",
-      "value": "123 Street Name, City, Country"
-    },
-    "email": {
-      "title": "Email",
-      "value": "contact@example.com"
-    },
-    "phone": {
-      "title": "Phone",
-      "value": "+1 234 567 8900"
-    },
-    "form": {
-      "name": "Name",
-      "namePlaceholder": "Enter your name",
-      "email": "Email",
-      "emailPlaceholder": "Enter your email",
-      "subject": "Subject",
-      "subjectPlaceholder": "Enter subject",
-      "message": "Message",
-      "messagePlaceholder": "Enter your message",
-      "submit": "Send Message"
-    }
-  }
-
-
-
     }
   },
   fr: {
@@ -353,6 +300,14 @@ const resources = {
       required: "Ce champ est requis",
       invalidEmail: "Adresse email invalide",
       messageSent: "Message envoyé avec succès",
+      Residence: "Résidence",
+      Address: "Adresse",
+      Phone: "Téléphone",
+      Frontend: "Frontend",
+      Backend: "Backend",
+      CMS: "CMS",
+      Performance: "Performance & UX",
+      PerformanceDesc: "Optimisation, design responsive",
       ////Home
       Bonjour: "Bonjour !",
       Auth: "Je suis",
@@ -486,7 +441,6 @@ const resources = {
       Mobile: "Mobile",
       tools: " Outils que j'utilise",
       projets: "Mes Projets Récents",
-      projectsSubtitle: "Découvrez une sélection de mes réalisations techniques et créatives :",
       ERP: "ERP / Plateforme ERP",
       descriptionERP: "Plateforme ERP multi-branches intégrant la gestion des fournisseurs, des ressources humaines, de la finance et de la paie. Application modulaire, sécurisée et évolutive, développée avec Next.js pour le front-end, Spring Boot pour le back-end et PostgreSQL comme base de données.",
       SDDM: "SDDM E-commerce",

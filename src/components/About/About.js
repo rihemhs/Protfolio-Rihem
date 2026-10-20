@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Badge } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import AboutCard from "./AboutCard";
 import Toolstack from "./Toolstack";

@@ -3,12 +3,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import leaf from "../../Assets/Projects/glocal.PNG";
-import telice from "../../Assets/Projects/telice.PNG";
 import soforthandelsregister from "../../Assets/Projects/handless.PNG";
-import chatify from "../../Assets/Projects/chatify.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import sddmprojet from "../../Assets/Projects/sddmprojet.PNG";
-import ERPGETS from "../../Assets/Projects/ERPGETS.jpeg";
 import TicketProm from "../../Assets/Projects/TicketProm.PNG";
 import glovax from "../../Assets/Projects/glovax.PNG";
 import hanshafish from "../../Assets/Projects/hanshafish.jpeg";
@@ -106,7 +103,6 @@ function Projects() {
 
   const webProjects = [
         {
-      imgPath: ERPGETS,
       title: t("ERPHR"),
       demoLink: "https://dev-hr.gets-company.com/",
       description: t("descriptionERPHR"),
@@ -141,7 +137,6 @@ function Projects() {
     },
   
     {
-      imgPath: ERPGETS,
       title: t("ERPFinance"),
       demoLink: "https://dev-daf.gets-company.com/",
       description: t("descriptionERPFinance"),

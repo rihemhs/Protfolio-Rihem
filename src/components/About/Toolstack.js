@@ -1,9 +1,8 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { 
-  SiLinux, 
-  SiVisualstudiocode, 
-  SiPostman, 
+import {
+  SiVisualstudiocode,
+  SiPostman,
   SiIntellijidea // <-- ajouté pour IntelliJ
 } from "react-icons/si";
 import { MdAndroid } from "react-icons/md";

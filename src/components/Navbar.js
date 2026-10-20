@@ -9,7 +9,6 @@ import {
   AiOutlineHome,
   AiOutlineUser,
   AiOutlineFundProjectionScreen,
-  AiOutlinePhone,
   AiOutlineClose,
   AiOutlineMenu,
   AiOutlineGlobal
