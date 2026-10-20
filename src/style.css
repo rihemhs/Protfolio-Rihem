@@ -5040,3 +5040,32 @@ body[data-theme='dark'] .hero-title span {
     grid-column: auto;
   }
 }
+
+.project-section .project-heading,
+.project-section .project-heading .purple-gradient,
+.project-section .project-card-view .project-title {
+  color: #2563eb !important;
+  -webkit-text-fill-color: #2563eb !important;
+}
+
+.project-section .category-label,
+.project-section .tech-badge {
+  color: #2563eb !important;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+}
+
+body[data-theme='dark'] .project-section .project-heading,
+body[data-theme='dark'] .project-section .project-heading .purple-gradient,
+body[data-theme='dark'] .project-section .project-card-view .project-title,
+body[data-theme='dark'] .project-section .category-label,
+body[data-theme='dark'] .project-section .tech-badge {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+body[data-theme='dark'] .project-section .category-label,
+body[data-theme='dark'] .project-section .tech-badge {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+}
